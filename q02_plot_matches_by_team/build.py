@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-ipl = pd.read_csv('data/ipl_dataset.csv', index_col=0)
+ipl_df = pd.read_csv('../data/ipl_dataset.csv', index_col=None)
 
 
 def plot_matches_by_team():
@@ -12,8 +12,9 @@ def plot_matches_by_team():
     plt.bar(x_series, matches_by_team['match_code'])
     plt.xlabel('Team')
     plt.ylabel('Matches Count')
-    
+
     plt.xticks(x_series, matches_by_team.index.values, rotation=90)
+    plt.savefig("plot_matches_by_team.png")
     plt.show()
 
 plot_matches_by_team()
