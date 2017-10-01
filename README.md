@@ -1,4 +1,5 @@
 # Introduction to Visualization Assignment
+![GitHub Logo](https://s3.ap-south-1.amazonaws.com/greyatom-social/GreyAtom-logo.png)
 
 ## What have we learnt so far?
 * Understand the need for Pandas in Data Science
