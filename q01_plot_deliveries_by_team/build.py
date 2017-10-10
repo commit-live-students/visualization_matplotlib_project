@@ -6,3 +6,8 @@ ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
 
 # Solution
+def plot_deliveries_by_team():
+    data = ipl_df.groupby("batting_team")["delivery"].nunique()
+    plt.bar(np.arange(13),data)
+    plt.xticks(np.arange(13),data.index,rotation=90)
+    plt.show()
