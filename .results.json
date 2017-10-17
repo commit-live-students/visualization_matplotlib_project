@@ -1,0 +1,1 @@
+{"stats": {"passes": 1, "skipped": 0, "encoding": "UTF-8", "errors": 0, "failures": 0, "total": 1}, "results": [{"classname": "visualization_matplotlib_project.q01_plot_deliveries_by_team.tests.test_plot_deliveries_by_team:TestPlot_deliveries_by_team", "type": "success", "name": "test_plot_deliveries_by_team", "time": 8.106231689453125e-05}]}
