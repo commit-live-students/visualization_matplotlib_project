@@ -1,1 +1,0 @@
-{"stats": {"passes": 1, "skipped": 0, "encoding": "UTF-8", "errors": 0, "failures": 0, "total": 1}, "results": [{"classname": "visualization_matplotlib_project.q03_plot_innings_runs_histogram.tests.test_plot_innings_run_histogram:TestPlot_innings_run_histogram", "type": "success", "name": "test_plot_innings_run_histogram", "time": 9.083747863769531e-05}]}
