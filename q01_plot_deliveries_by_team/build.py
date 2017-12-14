@@ -4,5 +4,8 @@ import matplotlib.pyplot as plt
 
 ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
-
-# Solution
+def plot_deliveries_by_team():
+    val=ipl_df.groupby('batting_team')
+    final=val['delivery'].count()
+    final.plot(kind='bar')
+    plt.show()
