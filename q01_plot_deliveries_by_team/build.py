@@ -12,4 +12,3 @@ def plot_deliveries_by_team():
     sort=counts.sort_values(by='delivery',ascending=False)
     sort.plot(kind='bar')
     plt.show()
-print plot_deliveries_by_team()

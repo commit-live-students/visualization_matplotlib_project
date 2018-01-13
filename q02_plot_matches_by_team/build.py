@@ -11,5 +11,3 @@ def plot_matches_by_team():
     df = DataFrame(ipl_df[['match_code', 'batting_team']].groupby(['batting_team'])['match_code'].nunique())
     df.plot(kind = 'bar')
     plt.show()
-
-print plot_matches_by_team()
