@@ -11,5 +11,3 @@ def plot_innings_runs_histogram():
     df2 = pd.pivot_table(data=df1.loc[:,['match_code', 'runs']], index='match_code', columns=df1.loc[:,'inning'], aggfunc='count')
     df2.plot(kind='hist')
     plt.show()
-
-plot_innings_runs_histogram()
