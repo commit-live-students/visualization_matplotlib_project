@@ -4,14 +4,14 @@ from pandas import DataFrame
 import numpy as np
 import matplotlib.pyplot as plt
 
-plot_deliveries_by_team()
+def plot_deliveries_by_team():
     ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
     delv = (ipl_df.groupby(by=('batting_team') )).count()
 
     delv['delivery'].plot.bar()
-    plt.show()
+    return plt.show()
 
-
+plot_deliveries_by_team()
 # Solution
 
 import pandas as pd
