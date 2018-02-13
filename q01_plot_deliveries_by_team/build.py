@@ -16,8 +16,12 @@ def plot_deliveries_by_team():
     deliv_by_team.ylabel('deliveries')
     #return deliv_by_team
     plt.show()
+    '''df1 = ipl_df.loc[:,['match_code','batting_team','delivery']]
+    a = df1.groupby(['batting_team'])
+    aa = a['delivery'].size()
+    return'''
 
 
 
 
-#print plot_deliveries_by_team()
+print plot_deliveries_by_team()
