@@ -21,10 +21,12 @@ def plot_innings_runs_histogram():
     print merge_df.head()
 
     plt.hist(merge_df,bins=250)
+    plt.subplots(1,2)
     xaxes=['1','2']
     yaxes=['runs']
     plt.title('Runs per innings')
     plt.xlabel('Matches')
     plt.ylabel('Runs Scored')
+
     plt.show()
 plot_innings_runs_histogram()
