@@ -8,19 +8,15 @@ ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
 def plot_innings_runs_histogram():
 
-    s = DataFrame(ipl_df['total'].groupby([ipl_df['match_code'], ipl_df['batsman']]).sum())
-    s1 = DataFrame(ipl_df['delivery'].groupby([ipl_df['match_code'], ipl_df['batsman']]).count())
-    #s3 = pd.DataFrame( np.hstack((s1.values, s2.values))
-    #plt.hist(s)
-    #plt.show()
+    # Runs scored in first and second innings grouped by match code
+    runs_scored = ipl_df.pivot_table('total', aggfunc = np.sum, index=['match_code'], \
+                      columns = 'inning').fillna(0)
+    #Runs scored in first innings
+    runs0 = runs_scored.values[:,0]
+    #Runs scored in second innings
+    runs1 = runs_scored.values[:,1]
 
-    runs_scored = pd.pivot_table(ipl_df, values='total', index=['match_code', 'batsman','inning'], \
-                      aggfunc=np.sum)
-    balls_played = pd.pivot_table(ipl_df, values='delivery', index=['match_code', 'batsman','inning'], \
-                      aggfunc= len)
-    data = pd.concat(runs_scored, balls_played)
-    print data
-    #plt.hist(data['delivery'])
-    #plt.hist()
-
-plot_innings_runs_histogram()
+    fig, axs = plt.subplots(1, 2)
+    axs[0].hist(runs0)
+    axs[1].hist(runs1)
+    plt.show()
