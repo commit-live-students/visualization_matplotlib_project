@@ -1,21 +1,30 @@
+# %load q02_plot_matches_by_team/build.py
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
 ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
-#print ipl_df.head(0)
+
 
 
 def plot_matches_by_team():
-    batting_team=ipl_df['batting_team']
-    #To group the teams and get their distinct counts
-    count_matches_played=ipl_df.groupby(by=['batting_team'])['batting_team'].nunique
-    x_series=batting_team
-    y_series=count_matches_played
+    matches_by_team = ipl_df[['batting_team', 'match_code']].groupby(['batting_team']).aggregate('nunique')
+    x_series = np.arange(len(matches_by_team.index))
+    
+    plt.bar(x_series, matches_by_team['match_code'])
+    plt.xlabel('Team')
+    plt.ylabel('Matches Count')
+    plt.xticks(x_series, matches_by_team.index.values, rotation=90)
+    plt.show()
 
-    plt.bar(x_series,y_series)
-    plt.title("Total number of matches played by each team")
-    plt.xlabel("Batting team")
-    plt.ylabel("Count of Matches Played")
-    plt.show();
 plot_matches_by_team()
+
+
+   
+
+
+
+
+   
+
+
