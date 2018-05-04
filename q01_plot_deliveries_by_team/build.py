@@ -8,11 +8,13 @@ ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
 # Solution
 def plot_deliveries_by_team():
-    g = ipl_df.groupby(ipl_df['batting_team']).sum()
-    plt.bar(g.index, g['runs'])
+    g = ipl_df.groupby(ipl_df['batting_team']).count()
+    plt.bar(g.index, g['delivery'])
     plt.xticks(rotation=90)
     plt.show()
 
 plot_deliveries_by_team()
+g = ipl_df.groupby(ipl_df['batting_team']).count()
+g['delivery']
 
 
