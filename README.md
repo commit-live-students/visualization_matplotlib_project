@@ -13,3 +13,5 @@ This project challenges you to understand and analyze data through visualization
 In IPL teams representing Indian cities contend each year. Chris Gayle is the highest run scorer in IPL. Do you know who is the second highest run scorer (without using ‘for’ loop)? This module can help you determine the second highest run scorer by manipulating large data sets to extract business insights.
 
 *This project challenges you to manipulate large datasets without using conventional programming techniques to extract business insights.*
+
+Note :- include the line plt.switch_backend('agg') in every build.py
