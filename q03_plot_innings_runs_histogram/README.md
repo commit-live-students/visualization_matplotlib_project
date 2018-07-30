@@ -12,4 +12,4 @@ This function returns nothing
 
 
 ## Hint:
-Remember, what we want is the count of balls played (aggregation) and sum of runs (aggregation), per match per player (grouping). Since there is one grouping, and two different aggregations, you might want to "merge" them into one dataframe.
+Remember, what we want is th sum of runs (aggregation), per match (grouping). You will need to first create a dataframe as required and the plot the same. Look for a suitable pandas function that can be used for such operation.
