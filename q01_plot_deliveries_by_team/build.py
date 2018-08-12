@@ -7,3 +7,5 @@ ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
 
 # Solution
+df=ipl_df[['team1','delivery']].groupby('team1').count().plot.bar()
+plt.show()
