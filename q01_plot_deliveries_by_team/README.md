@@ -9,3 +9,7 @@ This function takes in no parameters
 
 ## Returns
 This function returns nothing
+### Hint
+
+* What is needed here is essentially a "batting_team" vs "count of deliveries" 
+* if you provide 'count()' as aggregator to the groupby().agg(aggregator), it will give you counts of deliveries
