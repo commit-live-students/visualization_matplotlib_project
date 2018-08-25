@@ -8,6 +8,6 @@ ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
 # Solution
 def plot_matches_by_team():
-    return Non
+    return None
 
 
