@@ -6,7 +6,7 @@ plt.switch_backend('agg')
 ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
 def plot_innings_runs_histogram():
-    df=ipl_df[['inning','runs']]
+    df=ipl_df[['inning','runs']] #creating the require df fr
     df.groupby('inning')['inning'].sum().plot(kind='hist')
     plt.show()
 
