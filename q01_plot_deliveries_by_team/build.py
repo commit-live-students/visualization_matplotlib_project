@@ -15,7 +15,7 @@ def plot_deliveries_by_team():
     plt.bar(x_series, deliveries_by_team)
     plt.xticks(x_series, deliveries_by_team.index.values, rotation=90)
     plt.show()
-    print(deliveries_by_team.index)
+    
 plot_deliveries_by_team()
 
 
