@@ -8,6 +8,7 @@ ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
 
 # Solution
+
 def plot_deliveries_by_team():
     all_teams = ipl_df['batting_team']
     x_series = pd.Series(all_teams.value_counts().index)
@@ -19,5 +20,4 @@ def plot_deliveries_by_team():
     plt.xlabel('batting_team')
     plt.ylabel('delivery')
     plt.show()
-
 
