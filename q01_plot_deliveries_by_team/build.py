@@ -7,3 +7,14 @@ ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
 
 # Solution
+def plot_deliveries_by_team():
+    team_delivery_counts = ipl_df.groupby('batting_team').count()
+    row_count = team_delivery_counts.shape[0]
+    x_series = np.arange(0, row_count, 1)
+    plt.figure(figsize=(20,5))
+    plt.bar(x_series, team_delivery_counts.delivery)
+    plt.xlabel('Batting Team')
+    plt.ylabel(' Deliveries')
+    plt.title('Deliveries by Team Plot')
+    plt.xticks(x_series, team_delivery_counts.index, rotation=45)
+    plt.show()
