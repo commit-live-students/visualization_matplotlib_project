@@ -7,3 +7,8 @@ ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
 
 # Solution
+def plot_deliveries_by_team():
+    data = ipl_df.groupby('batting_team')
+    data_table = data['delivery'].count()
+    data_table.plot(kind = 'bar')
+    plt.show()
