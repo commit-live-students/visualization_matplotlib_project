@@ -5,4 +5,6 @@ plt.switch_backend('agg')
 ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
 
-# Solution
+def  plot_matches_by_team():
+    ipl_df.groupby("batting_team").agg({'match_code':"nunique"}).plot(kind='bar')
+    plt.show()

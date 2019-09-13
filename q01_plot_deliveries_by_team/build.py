@@ -5,5 +5,9 @@ plt.switch_backend('agg')
 
 ipl_df = pd.read_csv('data/ipl_dataset.csv', index_col=None)
 
+def plot_deliveries_by_team():
+    ipl_df.groupby('batting_team').agg({'delivery':'count'}).plot(kind="bar")
+    plt.show()
+
 
 # Solution
